@@ -9,7 +9,7 @@ public static boolean checkBook(String bookcallno){
 		Connection con=DB.getConnection();
 		PreparedStatement ps=con.prepareStatement("select * from books where callno=?");
 		ps.setString(1,bookcallno);
-	    ResultSet rs=ps.executeQuery();
+	        ResultSet rs=ps.executeQuery();
 		status=rs.next();
 		con.close();
 	}catch(Exception e){System.out.println(e);}
